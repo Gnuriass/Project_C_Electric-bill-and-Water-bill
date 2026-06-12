@@ -1,5 +1,206 @@
 # Utility Bill Calculator (C Language)
 
+A console-based utility bill calculator developed in C that automatically calculates electricity and water bills using progressive rate structures. The program includes service charges, Ft (Fuel Adjustment Charge), VAT (7%), and generates expense comparisons and average cost summaries.
+
+The calculation formulas are based on Thailand's utility billing rates (2022 version).
+
+---
+
+## 🌟 Features
+
+### Service Selection System
+
+* Calculate either:
+
+  * Electricity bills (Option 1)
+  * Water bills (Option 2)
+* Both services are available within a single application.
+
+### Progressive Electricity Billing
+
+* Calculates electricity costs based on tiered consumption rates.
+* Includes:
+
+  * Monthly service charge
+  * Ft (Fuel Adjustment Charge)
+  * VAT (7%)
+
+### Water Bill Calculation
+
+* Supports multiple water meter sizes.
+* Applies different service fees based on meter size.
+* Uses loops to calculate progressive water rates.
+
+### Repeated Calculation System
+
+* Allows users to perform multiple calculations without restarting the program.
+
+### Expense Summary & Comparison
+
+* Calculates the average cost of all transactions.
+* Compares water and electricity expenses.
+* Displays which utility costs more and by how much.
+
+---
+
+## 🧮 Calculation Formula
+
+The system uses the following formula:
+
+Total=(Bill+Service+Addition)\times1.07
+
+Where:
+
+### Electricity Bill
+
+```text
+Addition = Ft × Electricity Units
+```
+
+### Water Bill
+
+```text
+Addition = Raw Water Charge × Water Units
+```
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+* GCC Compiler (e.g., MinGW)
+* Or any C-compatible IDE such as:
+
+  * Code::Blocks
+  * Visual Studio Code
+  * Dev-C++
+
+### Compile the Program
+
+```bash
+gcc main.c -o bill_calculator
+```
+
+### Run the Program
+
+#### Windows
+
+```bash
+bill_calculator.exe
+```
+
+#### Linux / macOS
+
+```bash
+./bill_calculator
+```
+
+---
+
+## 💡 Example Test Cases
+
+### Example 1: Electricity Bill Calculation
+
+**Input**
+
+```text
+Electricity Units: 533
+```
+
+**Expected Output**
+
+```text
+Electric Bill : 2162.45 baht
+Service Charge: 8.19 baht
+Electric Ft   : 497.98 baht
+VAT (7%)      : 186.80 baht
+Total         : 2855.43 baht
+```
+
+---
+
+### Example 2: Water Bill Calculation
+
+**Input**
+
+```text
+Meter Size      : 0.3
+Water Usage     : 11
+```
+
+**Expected Output**
+
+```text
+Water Bill      : 93.50 baht
+Raw Water Charge: 1.65 baht
+Service Charge  : 25.00 baht
+VAT (7%)        : 8.41 baht
+Total           : 128.56 baht
+```
+
+---
+
+## 📸 Program Preview
+
+![Program Screenshot](./images.png)
+
+---
+
+## 📂 Code Structure
+
+### main()
+
+Controls:
+
+* Main menu navigation
+* Switch-case selection
+* Looping system for repeated calculations
+* Average cost and comparison summaries
+
+### calElectric()
+
+Calculates electricity bills using:
+
+* Progressive rate structures
+* Conditional statements (`if-else`)
+* Ft charge calculations
+* VAT calculations
+
+### calWater()
+
+Calculates water bills using:
+
+* Meter-size validation
+* Progressive water rate calculations
+* Loop-based billing logic
+* Service charge determination
+
+---
+
+## 🎯 Learning Objectives
+
+This project was developed to practice fundamental C programming concepts, including:
+
+* Functions
+* Conditional Statements (`if-else`)
+* Switch Case
+* Loops
+* Modular Programming
+* Mathematical Calculations
+* User Input and Output Handling
+
+It serves as a practical exercise for understanding control structures and function decomposition in the C programming language.
+
+---
+
+## 👤 Author
+
+**Sarochinee Bunyarit**
+
+---
+# Utility Bill Calculator (C Language)
+
 โปรแกรมคำนวณค่าน้ำประปาและค่าไฟฟ้าอัตโนมัติ พัฒนาด้วยภาษา C โดยคำนวณตามโครงสร้างอัตราก้าวหน้า (Progressive Rate) พร้อมคิดค่าบริการ ค่า Ft และภาษีมูลค่าเพิ่ม (VAT 7%) ให้อย่างเสร็จสรรพ พร้อมสรุปเปรียบเทียบค่าใช้จ่ายตอนท้าย (สูตรคำนวณปี 2565)
 
 ## 🌟 คุณสมบัติระบบ (Features)
