@@ -56,6 +56,8 @@ $$Total = (Bill + Service + Addition) \times 1.07$$
   * tax 7%: `8.41` baht
   * **Total:** `128.56` baht
     
+![Main Dashboard](./images.png)
+    
 ## 📂 โครงสร้างภายในโค้ด (Code Structure)
 - main() : ฟังก์ชันหลัก ควบคุมหน้าเมนู (Switch Case), ระบบวนลูปรับค่าใหม่ และประมวลผลเปรียบเทียบ/ค่าเฉลี่ยตอนท้ายโปรแกรม
 - calElectric() : ฟังก์ชันคำนวณค่าไฟฟ้าแบบขั้นบันได (เงื่อนไข if-else ตรวจสอบหน่วย)
